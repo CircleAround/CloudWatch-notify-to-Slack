@@ -3,7 +3,7 @@ CloudWatchのアラームをSlackで通知するためのスクリプト
 当プロジェクトを圧縮したファイルをAWS Lambdaにアップロードして使う
 
 ## 概要
-CloudWatchで設定したアラームをAWS Lambdaを通してSlackに通知する
+CloudWatchで設定したアラームをAWS Lambdaを通してSlackの選択したチャンネルへ通知する
 
 CloudWatch → SNSトピック → AWS Lambda → Slack のようになるように下記で設定する
 
