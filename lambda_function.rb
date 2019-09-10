@@ -10,11 +10,13 @@ def handler(event:, context:)
     message = JSON.parse(event["Records"][0]["Sns"]["Message"])
 
     alerm_name = message["AlarmName"]
+    description = message["AlarmDescription"]
     value = message["NewStateValue"]
     reason = message["NewStateReason"]
     metric_name = message["Trigger"]["MetricName"]
 
     text = "AlarmName:#{alerm_name}\n"+
+        "説明:#{description}\n"+
         "NewStateValue:#{value}\n"+
         "NewStateReason:#{reason}\n"+
         "MetricName:#{metric_name}"
